@@ -23,3 +23,5 @@ url: "" #"https://www.yalejewelers.com" the base hostname & protocol for your si
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
