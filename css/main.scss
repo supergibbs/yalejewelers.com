@@ -4,3 +4,12 @@
 @charset "utf-8";
 
 @import "bootstrap/bootstrap";
+
+header.navbar-fixed-top {
+padding-left: 0;
+padding-right: 0;
+}
+
+#content{
+    margin-top: 110px;
+}

@@ -21,10 +21,19 @@ email: webmaster@yalejewelers.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" #"https://www.yalejewelers.com" the base hostname & protocol for your site
 #twitter_username: YaleJewelers
-#github_username:  supergibbs
+github_username:  supergibbs
 
 # Build settings
 markdown: kramdown
 sass:
   style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      description: "Fine Jewelry, Estate, Custom Design and Repairs"
+      order: 0
 
