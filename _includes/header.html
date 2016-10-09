@@ -4,9 +4,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+    <!-- Meta and Open Graph -->
+    <meta name="title" content="{{ site.title }}" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="keywords" content="{{ site.keywords }}" />
+
+    <meta content="{{ site.title }}" property="og:site_name">
+    <meta content="{{ page.title }}" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Check out https://www.yalejewelers.com - {{ page.description }}" property="og:description">
+    <meta content="/img/logo.jpg" property="og:image">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/main.css">
  
     <!-- Fav icon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>{{ site.title }}{% if page.title != 'Home' %} - {{ page.title }}{% endif %}</title>
