@@ -5,11 +5,15 @@
 
 @import "bootstrap/bootstrap";
 
+body {
+    padding-top: 6rem;
+}
+
 header.navbar-fixed-top {
 padding-left: 0;
 padding-right: 0;
 }
 
 #content{
-    margin-top: 110px;
+    min-height: 400px;
 }
