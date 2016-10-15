@@ -13,20 +13,27 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+
 title: Yale Jewelers
 description: "Fine Jewelry, Estate, Custom Design and Repairs"
-keywords: "Santa Monica, Jewelry, Jewelers, Custom, Diamonds, Los Angeles, colored diamonds, bracelets, rings, earrings, sapphires, emeralds, rubies, pink diamonds, blue diamonds, yellow diamonds, canary diamonds, brown diamonds, black diamonds, platinum, gold, stackable rings, wedding bands, Hearts & Arrows, Ideal Cut, Antique Jewelry, Art Deco, Watches, Rolex"
-email: webmaster@yalejewelers.com
+url: "http://www.yalejewelers.com"
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" #"https://www.yalejewelers.com" the base hostname & protocol for your site
-#twitter_username: YaleJewelers
-github_username:  supergibbs
+twitter:
+username: YaleJewelers
+
+logo: /img/logo.jpg
+
+google_site_verification: lAKceyEMLoLv1e4Sqk0mJUv7B2Eu3PP-fv5_DxJKpow
+
+repository: techtangent/yalejewelers.com
 
 # Build settings
 markdown: kramdown
 sass:
   style: compressed
+
+gems:
+- jekyll-seo-tag
 
 defaults:
   -
