@@ -9,11 +9,14 @@ body {
     padding-top: 6rem;
 }
 
-header.navbar-fixed-top {
-padding-left: 0;
-padding-right: 0;
+.navbar-brand {
+    padding: 0;
+
+    img {
+        height: 37px;
+    }
 }
 
-#content{
+#content {
     min-height: 400px;
 }

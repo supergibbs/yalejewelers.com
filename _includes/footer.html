@@ -1,6 +1,12 @@
     <footer class="text-muted">
         <div class="container">
             <div class="clearfix">
+                <div class="pull-xs-left">
+                    <a href="/">Home</a>
+                    {% assign nav_items = site.pages | where_exp:"item", "item.order > 0" | sort: 'order' %} {% for item in nav_items %}
+                        |&nbsp;<a href="{{ item.permalink }}">{{ item.title }}</a>                    
+                    {% endfor %}    
+                </div>
                 <div class="pull-xs-right">
                     &copy; 2016 Yale Jewelers. All rights reserved.
                 </div>
