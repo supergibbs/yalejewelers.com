@@ -1,13 +1,13 @@
     <footer class="text-muted">
         <div class="container">
             <div class="clearfix">
-                <div class="float-xs-left">
+                <div class="float-lg-left text-xs-center">
                     <a href="/">Home</a>
                     {% assign nav_items = site.pages | where_exp:"item", "item.order > 0" | sort: 'order' %} {% for item in nav_items %}
-                        |&nbsp;<a href="{{ item.permalink }}">{{ item.title }}</a>                    
+                        |&nbsp;<a class="text-nowrap" href="{{ item.permalink }}">{{ item.title }}</a>                    
                     {% endfor %}    
                 </div>
-                <div class="float-xs-right">
+                <div class="float-lg-right text-xs-center">
                     &copy; 2016 Yale Jewelers. All rights reserved.
                 </div>
             </div>

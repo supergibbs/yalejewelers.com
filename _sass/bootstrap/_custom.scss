@@ -2,3 +2,16 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+$brand-primary:             #3e1e06 !default;
+
+$navbar-light-color:                rgba(62,30,6,.5) !default;
+$navbar-light-hover-color:          rgba(62,30,6,.7) !default;
+$navbar-light-active-color:         rgba(62,30,6,.9) !default;
+$navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
+
+.navbar {
+    .nav-link {
+        font-weight: bold;
+    }
+}
