@@ -4,9 +4,9 @@
             <div class="clearfix hidden-md-up">
                 <button class="navbar-toggler float-xs-right" type="button" data-toggle="collapse" data-target="#yale-navbar"
                     aria-controls="yale-navbar" aria-expanded="false" aria-label="Toggle navigation"></button>
-                <a class="navbar-brand" href="/"><img src="img/logo.jpg" /></a>
+                <a class="navbar-brand" href="/"><img src="img/logo.jpg" ></a>
             </div>
-            <a class="navbar-brand hidden-sm-down" href="/"><img src="img/logo.jpg" /></a>
+            <a class="navbar-brand hidden-sm-down" href="/"><img src="img/logo.jpg" ></a>
             <div class="collapse navbar-toggleable-sm" id="yale-navbar">
                 <ul class="nav navbar-nav">
                     {% assign nav_items = site.pages | where_exp:"item", "item.order > 0" | sort: 'order' %} {% for item in nav_items %}
