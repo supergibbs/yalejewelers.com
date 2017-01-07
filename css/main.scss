@@ -12,6 +12,13 @@ $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 
 @import "bootstrap/bootstrap";
 
+@media (max-width: 576px) {
+  nav > .container {
+      margin-left: 0;
+      margin-right: 0;
+  }
+}
+
 body {
     padding-top: 6rem;
 }
