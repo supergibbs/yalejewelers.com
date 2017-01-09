@@ -3,12 +3,12 @@
   <head>
     {% include header.html %}
   </head>
-  <body>
+  <body class="with-nav">
     {% include nav.html %}
 
     <div id="content" class="container">
-        <h3 class="hidden-md-up">{{ page.title }}</h3>
-        {{ content }}
+      <h3 class="hidden-md-up">{{ page.title }}</h3>
+      {{ content }}
     </div>
 
     {% include footer.html %}
