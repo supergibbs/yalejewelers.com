@@ -48,3 +48,14 @@ body.with-nav {
 .text-smallcaps {
     font-variant: small-caps;
 }
+
+.member-logos {
+    text-align: center;
+    
+    a {
+        line-height: 180px;
+    }
+    img {
+        max-height: 150px;
+    }    
+}
