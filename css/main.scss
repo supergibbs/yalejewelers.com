@@ -12,15 +12,15 @@ $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 
 @import "bootstrap/bootstrap";
 
-@media (max-width: 576px) {
-  nav > .container {
-      margin-left: 0;
-      margin-right: 0;
-  }
+@include media-breakpoint-down(sm) {
+    nav > .container {
+        margin-left: 0;
+        margin-right: 0;
+    } 
 }
 
-body.with-nav {
-    padding-top: 6rem;
+body {
+    padding-top: 3rem;
 }
 
 .navbar-brand {
@@ -38,6 +38,7 @@ body.with-nav {
 }
 
 #content {
+    margin-top: 3rem;
     min-height: 400px;
 }
 
@@ -55,7 +56,12 @@ body.with-nav {
     a {
         line-height: 180px;
     }
+    
     img {
         max-height: 150px;
     }    
+}
+
+footer {
+    margin-bottom: 1em;
 }
