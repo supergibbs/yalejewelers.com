@@ -11,6 +11,7 @@ $navbar-light-active-color:         rgba(62,30,6,.9) !default;
 $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 
 @import "bootstrap/bootstrap";
+@import "lightbox.css";
 
 @include media-breakpoint-down(sm) {
     nav > .container {
@@ -54,6 +55,16 @@ body {
     img {
         max-height: 150px;
     }    
+}
+
+.gallery {
+    img {
+        max-height: 200px;
+        border: 5px solid transparent;        
+        &:hover {
+            border-width: 0;
+        }
+    }
 }
 
 footer {
