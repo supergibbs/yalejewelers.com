@@ -4,3 +4,17 @@ order: 4
 permalink: resident-artist
 ---
 
+<p>
+    Handmade and Designed By Marla Trudine
+</p>
+
+<div class="row align-items-center no-gutters text-center gallery bg-black rounded">
+    {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/marla'" %} {% for item in pics %}
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            {% assign title = item.basename | split: '_' %}
+            <a href="{{ item.path }}" data-lightbox="jewelry" data-title="{{ title[0] }}">
+                <img src="{{ item.path }}" class="img-fluid">
+            </a>
+        </div>
+    {% endfor %}
+</div>
