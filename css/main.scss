@@ -13,13 +13,6 @@ $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 @import "bootstrap/bootstrap";
 @import "lightbox.css";
 
-@include media-breakpoint-down(sm) {
-    nav > .container {
-        margin-left: 0;
-        margin-right: 0;
-    } 
-}
-
 body {
     padding-top: 3rem;
 }
