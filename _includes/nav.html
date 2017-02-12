@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="yale-navbar">
                 <ul class="navbar-nav mr-auto">
                     {% assign nav_items = site.pages | where_exp:"item", "item.order > 0" | sort: 'order' %} {% for item in nav_items %}
-                    <li class="nav-item {% if page.title == item.title %}active{% endif %}">
+                    <li class="nav-item {% if page.title == item.title %}active{% endif %} text-center">
                         <a class="nav-link" href="{{ item.permalink }}">{{ item.title }} {% if page.title == item.title %}<span class="sr-only">(current)</span>{% endif %}</a>
                     </li>
                     {% endfor %}
