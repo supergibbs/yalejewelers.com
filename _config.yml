@@ -44,4 +44,5 @@ defaults:
       layout: "default"
       description: "Fine Jewelry, Estate, Custom Design and Repairs"
       order: 0
+      carousel: ""
 

@@ -13,6 +13,15 @@ $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 @import "bootstrap/bootstrap";
 @import "lightbox.css";
 
+
+$slick-font-path: "../fonts/" !default;
+$slick-loader-path: "../img/" !default;
+$slick-arrow-color: #3e1e06 !default;
+$slick-dot-color: #3e1e06 !default;
+
+@import "slick/slick";
+@import "slick/slick-theme";
+
 body {
     padding-top: 3rem + $spacer * 2;
 }
@@ -66,4 +75,13 @@ body {
 
 footer {
     margin-bottom: 1em;
+}
+
+#carousel-yale-jewelers-home {
+    img {
+        max-height: 250px;
+        max-width: 100%;    
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

@@ -1,9 +1,19 @@
 --- 
 layout: "base" 
 title: Home 
-permalink: "/" 
+permalink: "/"
+carousel: "carousel-yale-jewelers-home"
 ---
 
+<div id="content" class="container">
+  <div id="carousel-yale-jewelers-home">
+    {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/carousel'" %} 
+
+    {% for item in pics %}
+        <div><img src="{{ item.path }}"></div>
+    {% endfor %}
+  </div>
+</div>
 <div class="jumbotron">
   <div class="container">
     <div class="row">
