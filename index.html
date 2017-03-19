@@ -3,6 +3,7 @@ layout: "base"
 title: Home 
 permalink: "/"
 carousel: "carousel-yale-jewelers-home"
+carouselSpeed: 4000
 ---
 
 <div id="content" class="container">
@@ -10,7 +11,7 @@ carousel: "carousel-yale-jewelers-home"
     {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/carousel'" %} 
 
     {% for item in pics %}
-        <div><img src="{{ item.path }}"></div>
+        <div><img src="{{ item.path }}" class='mx-auto img-fluid align-middle'></div>
     {% endfor %}
   </div>
 </div>

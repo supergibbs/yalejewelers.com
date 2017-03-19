@@ -79,9 +79,12 @@ footer {
 
 #carousel-yale-jewelers-home {
     img {
+        max-height: 350px;
+    }
+}
+
+#carousel-yale-jewelers-services {
+    img {
         max-height: 250px;
-        max-width: 100%;    
-        margin-left: auto;
-        margin-right: auto;
     }
 }

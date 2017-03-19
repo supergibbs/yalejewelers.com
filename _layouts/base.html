@@ -11,7 +11,7 @@
     {% include footer.html %}
     
     {% if page.carousel != "" %} 
-      {% include carousel.html elem_id = page.carousel %}
+      {% include carousel.html elem_id = page.carousel speed = page.carouselSpeed %}
     {% endif %}
   </body>
 </html>

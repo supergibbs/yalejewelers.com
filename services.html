@@ -2,8 +2,18 @@
 title: Services
 order: 3
 permalink: services
+carousel: "carousel-yale-jewelers-services"
 ---
 
+ <div id="carousel-yale-jewelers-services">
+    {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/services/carousel'" %} 
+
+    {% for item in pics %}
+        <div>
+            <a href="{{ item.path }}" data-lightbox="jewelry"><img src="{{ item.path }}" class='ml-auto mr-auto img-fluid'></a>    
+        </div>
+    {% endfor %}
+</div>
 <div class="row">
     <div class="col-md-9">
         <p>
