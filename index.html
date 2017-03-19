@@ -6,7 +6,7 @@ carousel: "carousel-yale-jewelers-home"
 carouselSpeed: 4000
 ---
 
-<div id="content" class="container">
+<div class="container mt-5">
   <div id="carousel-yale-jewelers-home">
     {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/carousel'" %} 
 
@@ -15,7 +15,7 @@ carouselSpeed: 4000
     {% endfor %}
   </div>
 </div>
-<div class="jumbotron">
+<div class="jumbotron p-5">
   <div class="container">
     <div class="row">
       <div class="col-md-7 col-lg-4">

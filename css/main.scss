@@ -16,8 +16,8 @@ $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 
 $slick-font-path: "../fonts/" !default;
 $slick-loader-path: "../img/" !default;
-$slick-arrow-color: #3e1e06 !default;
-$slick-dot-color: #3e1e06 !default;
+$slick-arrow-color: $brand-primary !default;
+$slick-dot-color: $brand-primary !default;
 
 @import "slick/slick";
 @import "slick/slick-theme";
@@ -27,8 +27,6 @@ body {
 }
 
 .navbar-brand {
-    padding: 0;
-
     img {
         height: 3em;
     }
@@ -39,10 +37,6 @@ body {
         font-weight: bold;
         font-size: larger;
     }
-}
-
-#content {
-    margin-top: 2rem;
 }
 
 .btn-icon {
@@ -59,9 +53,7 @@ body {
     }    
 }
 
-.bg-black{
-    background-color: black;
-}
+@include bg-variant('.bg-black', $black);
 
 .gallery {
     img {
@@ -71,10 +63,6 @@ body {
             border-width: 0;
         }
     }
-}
-
-footer {
-    margin-bottom: 1em;
 }
 
 #carousel-yale-jewelers-home {
