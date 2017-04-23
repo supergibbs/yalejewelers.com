@@ -5,14 +5,15 @@ permalink: jewelry
 ---
 
 <p>
-    Below is just an example of the many pieces carried at Yale Jewelers. Come by our store to see the full collection
-    or have Joe help you design something just for you.
+    Yale Jewelers specializes in engagement/wedding rings, custom design, restoration, repairs, and estate jewelry. We aim to
+    set ourselves apart by finding the most unique treasures and stocking an eclectic collection of fine jewelry. Our pieces
+    include everything from modern trends to one of a kind art and statement pieces.
 </p>
 
 <div class="row align-items-center no-gutters text-center gallery">
     {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/jewelry'" %} {% for item in pics %}
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
-            <a href="{{ item.path }}" data-lightbox="jewelry"><img src="{{ item.path }}" class="img-fluid"></a>
-        </div>
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <a href="{{ item.path }}" data-lightbox="jewelry"><img src="{{ item.path }}" class="img-fluid"></a>
+    </div>
     {% endfor %}
 </div>
