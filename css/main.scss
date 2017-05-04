@@ -13,7 +13,6 @@ $navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
 @import "bootstrap/bootstrap";
 @import "lightbox.css";
 
-
 $slick-font-path: "../fonts/" !default;
 $slick-loader-path: "../img/" !default;
 $slick-arrow-color: $brand-primary !default;
@@ -74,5 +73,53 @@ body {
 #carousel-yale-jewelers-services {
     img {
         max-height: 250px;
+    }
+}
+
+.service-img {
+    max-width: 200px;
+}
+
+.quote-box
+{
+	position: relative;
+	width: 100%;
+    max-width: 650px;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+    &:before, &:after
+    {
+        position: absolute;
+        width: 40%;
+        height: 10px;
+        content: ' ';
+        left: 12px;
+        bottom: 12px;
+        background: transparent;
+        -webkit-transform: skew(-5deg) rotate(-5deg);
+        -moz-transform: skew(-5deg) rotate(-5deg);
+        -ms-transform: skew(-5deg) rotate(-5deg);
+        -o-transform: skew(-5deg) rotate(-5deg);
+        transform: skew(-5deg) rotate(-5deg);
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    } 
+
+    &:after
+    {
+        left: auto;
+        right: 12px;
+        -webkit-transform: skew(5deg) rotate(5deg);
+        -moz-transform: skew(5deg) rotate(5deg);
+        -ms-transform: skew(5deg) rotate(5deg);
+        -o-transform: skew(5deg) rotate(5deg);
+        transform: skew(5deg) rotate(5deg);
     }
 }
