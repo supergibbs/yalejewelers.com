@@ -2,7 +2,94 @@
 title: Services
 order: 3
 permalink: services
+carousel: "carousel-yale-jewelers-services"
+slideCount: 3
 ---
 
-<div>
+ <div id="carousel-yale-jewelers-services">
+    {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/services/carousel'" %} 
+
+    {% for item in pics %}
+        <div>
+            <a href="{{ item.path }}" data-lightbox="jewelry"><img src="{{ item.path }}" class='ml-auto mr-auto img-fluid'></a>    
+        </div>
+    {% endfor %}
 </div>
+<br>
+<div class="row">
+    <div class="col-md-12 col-lg-8">
+        <p>
+            We are a neighborhood jeweler and and we pride ourselves on our referral business. It is our priority to exceed expectations and to provide exceptional personalized service to every customer. We are so fortunate to say that our customers become like family, and that our customers also entrust us with their own friends and families when they send them to us. Joe Boiadjian bought Yale Jewelers in 2005 after spending 30 years on the wholesale side of the jewelry business and he very much enjoys and values the face to face interaction and connection with his loyal customers and new-comers alike.
+        </p>
+        <p class="quote-box">
+            <strong id="quote"></strong>
+        </p>
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <ul>
+            <li>Gemologist on Site</li>
+            <li>Full-Service Watch &amp; Jewelry Repair</li>
+            <li>Free Verbal Appraisals</li>
+            <li>Custom Design</li>
+            <li>Stone Cutting</li>
+            <li>Pearl Stringing</li>
+            <li>Antique Jewelry &amp; Restoration</li>
+        </ul>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-6 col-xl-2">
+        <div class="text-center">
+            <img src="img/services/graded_by_gia.png" alt="Graded by GIA" class="img-fluid rounded service-img"><br>
+            <a href="http://www.gia.edu/gem-encyclopedia">Explore gem encyclopedia on GIA</a>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-2 push-xl-8">
+        <div class="text-center">
+            <img src="img/services/anatomy.png" alt="GIA Anatomy of a Diamond" class="img-fluid rounded service-img">
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-8 pull-xl-2 hidden-sm-down text-center">
+        <object height="380" width="720" data="https://www.gia.edu/4cs-tool/carat/carat-tool-en.html"></object>
+    </div>
+</div>
+<p>
+    Custom re-design of your existing pieces or restoration of your antique jewelry and watches is a passion of ours! Bring the
+    pieces that you no longer wear or would like to make changes to, and we will take great care to transform your old or
+    inherited jewelry into your new favorite pieces that express who you are today, while retaining their sentimentality
+    and memories.
+</p>
+<p>
+    Or if you would like to fully <i>restore</i> your antique pieces instead, we work with our own specialists that share our enthusiasm
+    and respect for the older treasures to restore them to their former glory so they can be worn and enjoyed for many years
+    to come.
+</p>
+<p>
+    And finally if there is design idea or vision that you would like to see come to life…we relish in the opportunity to help
+    make that dream into a reality with a custom designed piece, made just for you!
+</p>
+<p class="quote-box">
+    <strong id="quote2"></strong>
+</p>
+
+<script type="text/javascript">
+
+window.onload=function name() {
+    var quotes = [
+        {% for q in site.data.quotes %}
+        "<p>&ldquo;{{q.quote}}&rdquo;</p><div class='text-right'>-{{q.name}}, {{q.city}}</div>", 
+        {% endfor %}
+    ];
+    
+    var i,i2;   
+    i = i2 = Math.floor(Math.random() * quotes.length);
+    
+    while(i===i2)
+        i2 = Math.floor(Math.random() * quotes.length);
+ 
+    document.getElementById("quote").innerHTML = quotes[i];
+    document.getElementById("quote2").innerHTML = quotes[i2];
+};
+
+</script>

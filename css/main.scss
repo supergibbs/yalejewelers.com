@@ -3,17 +3,122 @@
 ---
 @charset "utf-8";
 
+$brand-primary:                     #3e1e06 !default;
+
+$navbar-light-color:                rgba(62,30,6,.5) !default;
+$navbar-light-hover-color:          rgba(62,30,6,.7) !default;
+$navbar-light-active-color:         rgba(62,30,6,.9) !default;
+$navbar-light-disabled-color:       rgba(62,30,6,.3) !default;
+
 @import "bootstrap/bootstrap";
+@import "lightbox.css";
+
+$slick-font-path: "../fonts/" !default;
+$slick-loader-path: "../img/" !default;
+$slick-arrow-color: $brand-primary !default;
+$slick-dot-color: $brand-primary !default;
+
+@import "slick/slick";
+@import "slick/slick-theme";
 
 body {
-    padding-top: 6rem;
+    padding-top: 3rem + $spacer * 2;
 }
 
-header.navbar-fixed-top {
-padding-left: 0;
-padding-right: 0;
+.navbar-brand {
+    img {
+        height: 3em;
+    }
 }
 
-#content{
-    min-height: 400px;
+.navbar {
+    .nav-link {
+        font-weight: bold;
+        font-size: larger;
+    }
+}
+
+.btn-icon {
+  @include button-size(0,0,0, $btn-border-radius-sm);
+}
+
+.text-smallcaps {
+    font-variant: small-caps;
+}
+
+.member-logos {
+    img {
+        max-height: 150px;
+    }    
+}
+
+@include bg-variant('.bg-black', $black);
+
+.gallery {
+    img {
+        max-height: 200px;
+        border: 5px solid transparent;        
+        &:hover {
+            border-width: 0;
+        }
+    }
+}
+
+#carousel-yale-jewelers-home {
+    img {
+        max-height: 350px;
+    }
+}
+
+#carousel-yale-jewelers-services {
+    img {
+        max-height: 250px;
+    }
+}
+
+.service-img {
+    max-width: 200px;
+}
+
+.quote-box
+{
+	position: relative;
+	width: 100%;
+    max-width: 650px;
+	padding: 20px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+    &:before, &:after
+    {
+        position: absolute;
+        width: 40%;
+        height: 10px;
+        content: ' ';
+        left: 12px;
+        bottom: 12px;
+        background: transparent;
+        -webkit-transform: skew(-5deg) rotate(-5deg);
+        -moz-transform: skew(-5deg) rotate(-5deg);
+        -ms-transform: skew(-5deg) rotate(-5deg);
+        -o-transform: skew(-5deg) rotate(-5deg);
+        transform: skew(-5deg) rotate(-5deg);
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    } 
+
+    &:after
+    {
+        left: auto;
+        right: 12px;
+        -webkit-transform: skew(5deg) rotate(5deg);
+        -moz-transform: skew(5deg) rotate(5deg);
+        -ms-transform: skew(5deg) rotate(5deg);
+        -o-transform: skew(5deg) rotate(5deg);
+        transform: skew(5deg) rotate(5deg);
+    }
 }

@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include header.html %}
-  </head>
-  <body>
-    {% include nav.html %}
+--- 
+layout: "base"
+---
 
-    <div id="content" class="container">
-        {{ content }}
-    </div>
-
-    {% include footer.html %}
-  </body>
-</html>
+<div class="container mt-5">
+  <h3 class="hidden-lg-up">{{ page.title }}</h3>
+  {{ content }}
+</div>

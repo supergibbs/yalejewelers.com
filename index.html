@@ -1,8 +1,64 @@
----
-title: Home
-order: 1
+--- 
+layout: "base" 
+title: Home 
 permalink: "/"
+carousel: "carousel-yale-jewelers-home"
+carouselSpeed: 4000
+slideCount: 4
 ---
 
-<div>
+<div class="container mt-5">
+  <div id="carousel-yale-jewelers-home">
+    {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/carousel'" %} 
+
+    {% for item in pics %}
+        <div><img src="{{ item.path }}" class='mx-auto img-fluid align-middle'></div>
+    {% endfor %}
+  </div>
 </div>
+<div class="jumbotron p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-lg-4">
+        <p>
+          Welcome to Yale Jewelers! We are excited to help you with all your jewelry needs. We offer 
+          classic or custom designs and have a resident artist for something unique.
+        </p>
+        <p class="quote-box">
+            <strong id="quote"></strong>
+        </p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <strong>Located at:</strong><br>
+        2839 Wilshire Blvd<br>
+        Santa Monica, CA 90403<br>
+        <br>
+        <strong>Phone</strong><br>
+        (310) 829-0605<br>
+        <br>
+        <strong>Hours</strong><br>
+        Tuesday - Saturday<br>
+        10<span class="text-smallcaps">am</span> to 5<span class="text-smallcaps">pm</span><br>
+        <br>
+      </div>
+      <div class="col-md-12 col-lg-4 text-md-center text-lg-right">
+        <img src="img/store_front.jpg" class="rounded img-fluid" alt="Yale Jewelers Store Front" >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+window.onload=function name() {
+    var quotes = [
+        {% for q in site.data.quotes %}
+        "<p>&ldquo;{{q.quote}}&rdquo;</p><div class='text-right'>-{{q.name}}, {{q.city}}</div>", 
+        {% endfor %}
+    ];
+    
+    var i = Math.floor(Math.random() * quotes.length); 
+    document.getElementById("quote").innerHTML = quotes[i];
+};
+
+</script>

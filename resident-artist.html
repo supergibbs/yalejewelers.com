@@ -1,0 +1,44 @@
+--- 
+title: Resident Artist 
+order: 4 
+permalink: resident-artist 
+---
+<div class="row">
+    <div class="col-12 col-sm-5 push-sm-7 col-md-4 push-md-8 col-lg-3 push-lg-9">
+        <img src="img/marla/marla.jpg" alt="Marla Trudine" class="img-fluid rounded mb-3"/>
+    </div>
+    <div class="col-12 col-sm-7 pull-sm-5 col-md-8 pull-md-4 col-lg-9 pull-lg-3">
+        <p>
+            My jewelry is an expression of bold femininity. Fluid lines of pure emotion that dance, cascade, intertwine and explode with
+            color. Each piece in some way represents the strength of femininity and strives to portray the paradoxical dichotomy
+            between the feminine ability to be both powerful and delicate, sophisticated yet playful, heroic yet whimsical.
+        </p>
+        <p>
+            I learned the craft of jewelry design and fabrication from my boundlessly talented mother. I became her apprentice as a child
+            and have now been immersed in the art form for nearly 30 years.
+        </p>
+        <p>
+            My hand crafted one-of-a-kind wearable sculptures, forged in gold and silver, combine precious, semi-precious, and breathtaking
+            hand carved stones, to create designs that invoke the feelings of ethereal beauty, powerful form, and “other worldly”
+            whimsical images of nature.
+        </p>
+        <p>
+            There is something special and intimate about creating jewelry, and my inspiration flows from my fierce adoration and observation
+            of nature, my travels, and by my focused studies of the art nouveau, art deco, and renaissance periods of art history.
+        </p>
+        <p>
+            Bringing fine art jewelry to my customers in the hopes of giving them a means to visual self expression is, to me, one of
+            the most sacred arts that I aspire to be a part of.
+        </p>
+    </div>
+</div>
+<div class="row align-items-center no-gutters text-center gallery bg-black rounded">
+    {% assign pics = site.static_files | where_exp:"item", "item.path contains 'img/marla/gallery'" %} {% for item in pics %}
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            {% assign title = item.basename | split: '_' %}
+            <a href="{{ item.path }}" data-lightbox="jewelry">
+                <img src="{{ item.path }}" class="img-fluid">
+            </a>
+        </div>
+    {% endfor %}
+</div>
