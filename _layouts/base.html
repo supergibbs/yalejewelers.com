@@ -5,12 +5,13 @@
   </head>
   <body>
     {% include nav.html %}
+    {% include banner.html %}
 
     {{ content }}
-    
+
     {% include footer.html %}
-    
-    {% if page.carousel != "" %} 
+
+    {% if page.carousel != "" %}
       {% include carousel.html elem_id = page.carousel speed = page.carouselSpeed slideCount = page.slideCount %}
     {% endif %}
   </body>
