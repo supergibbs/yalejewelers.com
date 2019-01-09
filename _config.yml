@@ -33,13 +33,12 @@ markdown: kramdown
 sass:
   style: compressed
 
-gems:
-- jekyll-seo-tag
-- jekyll-sitemap
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
@@ -47,4 +46,3 @@ defaults:
       order: 0
       carousel: ""
       carouselSpeed: 5000
-
