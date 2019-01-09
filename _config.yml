@@ -31,6 +31,9 @@ repository: techtangent/yalejewelers.com
 # Build settings
 markdown: kramdown
 sass:
+  load_paths:
+    - _sass
+    - node_modules
   style: compressed
 
 plugins:
@@ -46,3 +49,6 @@ defaults:
       order: 0
       carousel: ""
       carouselSpeed: 5000
+
+exclude: ["Gemfile", "Gemfile.lock", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+

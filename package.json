@@ -1,0 +1,24 @@
+{
+  "name": "yalejewelers.com",
+  "version": "1.0.0",
+  "description": "Website for Yale Jewelers in Santa Monica, CA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechTangent/yalejewelers.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TechTangent/yalejewelers.com/issues"
+  },
+  "homepage": "https://github.com/TechTangent/yalejewelers.com#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "slick-carousel": "^1.8.1"
+  }
+}
